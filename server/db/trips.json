@@ -1,0 +1,11 @@
+{
+	"trips": [{
+		"id": "trp1",
+		"name": "Trip to Amsterdam 2017",
+		"route": {
+			"location": ["Netherlands, Amsterdam", "Belarus, Minsk", "USA, NY", "Russia, Moscow"],
+			"arrivalDate": "2009-01-06",
+			"destinationDate": "2017-09-05"
+		}
+	}]
+}

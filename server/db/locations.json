@@ -1,0 +1,23 @@
+{
+	"locations": [{
+		"id": "loc1",
+		"country": "Netherlands",
+		"city": "Amsterdam"
+	}, {
+		"id": "loc2",
+		"country": "Belarus",
+		"city": "Minsk"
+	}, {
+		"id": "loc3",
+		"country": "USA",
+		"city": "NY"
+	}, {
+		"id": "loc4",
+		"country": "Russia",
+		"city": "Moscow"
+	}, {
+		"id": "loc5",
+		"country": "Poland",
+		"city": "Terespol"
+	}]
+}

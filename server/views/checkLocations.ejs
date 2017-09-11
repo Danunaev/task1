@@ -1,0 +1,6 @@
+<p/>Check Locations:
+<% for (let i = 0; i < locations.length; ++i) { %>
+	<br/> 
+	<input type="checkbox" name="location" value="<%= locations[i].country%>, <%= locations[i].city%>" /> 
+	<%= locations[i].country %>, <%= locations[i].city %>
+<% } %><br/>

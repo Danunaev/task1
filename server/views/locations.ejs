@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+ <% include title.ejs %> 
+  <head>
+    <% include navigation.ejs %> 
+  </head>
+  <body>
+    <table>
+      <th>№</th>
+      <th>Country</th>
+      <th>City</th>
+      <% for (let i = 0; i < locations.length; ++i) { %>
+      	<tr>
+          <td><%= i+1%></td>
+          <td><%= locations[i].country %></td>
+          <td><%= locations[i].city %></td>
+          <td><a href="http://localhost:3000/locations/delete/<%=locations[i].id %>">DELETE</a></td>
+        </tr>
+      <% } %>
+    </table>
+    <form action="/locations" method="post" type="application">
+    	<input type="text" name="country" title="Country" placeholder="Country" />
+    	<input type="text" name="city" title="City" placeholder="City" />
+    	<input type="submit" value="ADD" />
+    </form>
+  </body>
+</html>	

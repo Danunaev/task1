@@ -1,0 +1,5 @@
+<p/>Check Trips:
+<% for (let i = 0; i < trips.length; ++i) { %>
+    <br/> <input type="checkbox" name="trips" value="<%= trips[i].name%>" /> <%= trips[i].name %> 
+<% } %>
+<br/>

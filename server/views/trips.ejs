@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+ <% include title.ejs %> 
+  <head>
+    <% include navigation.ejs %> 
+  </head>
+  <body>
+    <table>
+      <th>№</th>
+      <th>Name</th>
+      <th>Route</th>
+      <% for (let i = 0; i < trips.length; ++i) { %>
+      	<tr>
+          <td><%= i+1%></td>
+          <td><%= trips[i].name %></td>
+          <td>
+            <ul>
+              <li>Location: 
+                <% for (let j = 0; j < trips[i].route.location.length; ++j) { %>
+                  <%= trips[i].route.location[j]%>; 
+                <% } %>
+              </li>
+              <li>Arrival Date: <%= trips[i].route.arrivalDate%></li>
+              <li>Destination Date: <%= trips[i].route.destinationDate%></li>
+              <a href="http://localhost:3000/trips/edit/<%=trips[i].id %>">EDIT</a>
+              <a href="http://localhost:3000/trips/delete/<%=trips[i].id %>">DELETE</a>
+            </ul>
+          </td>
+        </tr>
+      <% } %>
+    </table>
+    <form action="/trips" method="post" type="application">
+    	<input type="text" name="name" title="Name" placeholder="Name" />
+      <input type="date" name="arrivalDate" title="Arrival Date" placeholder="Arrival Date" />
+      <input type="date" name="destinationDate" title="Destination Date" placeholder="Destination Date" />
+      <% include checkLocations.ejs %>
+    	<input type="submit" value="ADD" />
+    </form>
+  </body>
+</html>	

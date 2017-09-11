@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+  <% include title.ejs %> 
+  <head>
+    <% include navigation.ejs %> 
+  </head> 
+  <body>
+    <form id = "form" action="/trips/edit/<%=trip.id %>" method="post" type="application">
+      <input type="text" name="name" title="Name" placeholder="Name" value="<%= trip.name%>" />
+      <input type="date" name="arrivalDate" title="Arrival Date" placeholder="Arrival Date" value="<%= trip.route.arrivalDate%>"/>
+      <input type="date" name="destinationDate" title="Destination Date" placeholder="Destination Date" value="<%= trip.route.destinationDate%>"/>
+      <% include checkLocations.ejs %> 
+    	<br/> <input type="submit" value="EDIT"/>
+    </form>
+  </body>
+</html>	

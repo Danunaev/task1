@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+  <% include title.ejs %> 
+  <head>
+    <% include navigation.ejs %> 
+  </head> 
+  <body>
+    <form id = "form" action="/customers/edit/<%=user.id %>" method="post" type="application">
+    	<input type="text" name="firstName" title="First Name" placeholder="First Name" value="<%= user.firstName%>"/>
+    	<input type="text" name="lastName" title="Last Name" placeholder="Last Name" value="<%= user.lastName%>"/>
+      <% include checkTrips.ejs %> 
+    	<br/> <input type="submit" value="EDIT"/>
+    </form>
+  </body>
+</html>	
